@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main id="main">
+<style>
+    #video {
+        width: 100%;
+        height: auto;
+
+    }
+</style>
+<body>
+    <video id="video" autoplay></video>
+
+    <script>
+        // 获取 video 标签
+        var video = document.getElementById('video');
+
+        // 检查浏览器是否支持 getUserMedia
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.mediaDevices.getUserMedia;
+
+        if (navigator.getUserMedia) {
+            // 请求使用摄像头
+            navigator.getUserMedia(
+                { video: true },
+                // 成功获取摄像头数据的回调函数
+                function(stream) {
+                    video.srcObject = stream;
+                },
+                // 获取失败的回调函数
+                function(err) {
+                    console.log("The following error occurred: " + err);
+                }
+            );
+        } else {
+            console.log("getUserMedia not supported");
+        }
+    </script>
+</body>
+</main>
+{% endblock %}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>宿舍管理</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords"
+		content="Invent Signup Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!--/Style-CSS -->
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+	<!--//Style-CSS -->
+</head>
+
+<body>
+	<!-- /login-section -->
+	<section class="w3l-login-6">
+		<div class="login-hny">
+			<div class="form-content">
+				<div class="form-right">
+					<div class="overlay">
+						<div class="grid-info-form">
+							<h5>欢迎使用</h5>
+							<h3>老年人健康监管系统 </h3>
+							<p>如果您已经注册账户请点击“已有账户”按钮。</p>
+							<a href="{% url 'account:user_login' %}" class="read-more-1 btn">已有账户</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="form-left">
+					<div class="middle">
+						<h4>加入我们</h4>
+						<p>创建您的账户.</p>
+					</div>
+					<form action="#" method="post" class="signin-form">{% csrf_token %}
+							<div class="form-input">
+								<label>用户名</label>
+								<input name="username" type="text" placeholder="" required />
+							</div>
+							<div class="form-input">
+								<label>邮箱</label>
+								<input name="email" type="email" placeholder="" required />
+							</div>
+							<div class="form-input">
+								<label>密码</label>
+								<input name="password" type="password" placeholder="" required />
+							</div>
+                        <div class="form-input">
+								<label>再次确认密码</label>
+								<input name="password2" type="password" placeholder="" required />
+							</div>
+							<button class="btn">创建账户</button>
+					</form>
+					<div class="copy-right text-center">
+						<p>© 2024 All rights reserved | Design by
+								<a href="http://w3layouts.com/" target="_blank">Hank</a></p>
+					 </div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<!-- //login-section -->
+</body>
+
+</html>
